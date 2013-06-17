@@ -1,0 +1,5 @@
+name: Franto.sk
+pygments: true
+ftp_host: franto.sk
+ftp_dir: /franto.sk/blog
+ftp_passive: true
