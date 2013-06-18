@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+
 		<!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="./css/syntax.css">
+		<link rel="stylesheet" href="{{ site.url }}/css/vendor/normalize.css">
+		<link rel="stylesheet" href="{{ site.url }}/css/main.css">
+		<link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+		<link rel="stylesheet/less" href="{{ site.url }}/css/custom.less">
+		
+		<!-- javascript -->
+		<script type="text/javascript" src="{{ site.url }}/js/less.js"></script>
+		<script type="text/javascript">
+			less.watch()
+		</script>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="./css/main.css">
+	</head>
+	<body>
 
-    </head>
-    <body>
+		<div class="container">
+			<div class="site">
+				<div class="header">
+					<h1 class="title" style="font-size: 3em; margin-bottom: 10px;"><a href="/">{{ site.name }}</a></h1>
+				</div>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title" style="font-size: 3em; margin-bottom: 10px;"><a href="/">{{ site.name }}</a></h1>
-            </div>
+				{{ content }}
 
-                {{ content }}
+				<div class="footer">
+					<div class="contact">
+						<p>
+							František Ďurajka,
+						</p>
+					</div>
+					<div class="contact">
+						<p>
+							frantisek.durajka [at] gmail [dot] com
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /container -->
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  František Ďurajka,
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-				  frantisek.durajka [at] gmail [dot] com
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-    </body>
+	</body>
 </html>
