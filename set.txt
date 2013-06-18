@@ -1,6 +1,7 @@
 chcp 65001
 
 gem install jekyll-less
+gem install -v 3.3.10.4 libv8
 gem install therubyracer
 
 http://brizzled.clapper.org/blog/2012/03/05/using-twitter-bootstrap-with-jekyll/
