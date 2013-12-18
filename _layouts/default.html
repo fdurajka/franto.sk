@@ -6,7 +6,7 @@
 
 		<!-- syntax highlighting CSS -->
 		<link rel="stylesheet" href="{{ site.url }}/css/vendor/normalize.css">
-		<link rel="stylesheet" href="{{ site.url }}/css/main.css">
+		<link rel="stylesheet" href="{{ site.url }}/css/old.css">
 		<link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
 		<link rel="stylesheet/less" href="{{ site.url }}/css/custom.less">
 		
@@ -30,6 +30,7 @@
 				<div class="footer">
 					<div class="contact">
 						<p>
+						    generated {{ site.time | date_to_string }} by  
 							František Ďurajka,
 						</p>
 					</div>
@@ -42,6 +43,7 @@
 			</div>
 		</div>
 		<!-- /container -->
+		{% include sig.md %}
 
 	</body>
 </html>
