@@ -5,8 +5,7 @@ title: Franto.sk
 
 {% for post in site.posts %}
 
-	<h2 style="margin-top: 30px; padding-bottom: 10px;">{{ post.title }} <span class="meta" style="float: left; font-weight: normal; padding-right: 10px; font-family: courier-new; ">{{ post.date | date_to_string }} &raquo; </span></h2>
-	
+	<h2><span>{{ post.date | date_to_string }}</span>{{ post.title }}</h2>
 	<div class="post">
 	{{ post.content }}
 	</div>

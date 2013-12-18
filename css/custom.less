@@ -1,11 +1,68 @@
-@baseColor: yellow;
-@baseBgColor: yellow;
+@bg: black;
+@fg: white;
 
-#myA {
-  background-color: @baseBgColor;
-  color: @baseColor;
+html, body {
+    font-family: sans-serif;
+    
+    font-size: 13px;
+    line-height: 1.65;
+    text-align: center;
+    background-color: @bg;
+    .container {
+        background-color: @fg;
+        color: @bg;
+        width: 50em;
+        text-align: justify;
+        margin: 3em auto 2em;
+        .site {
+            padding: 1em;
+            .header {
+               font-family: arial;
+               color: @fg;
+               background-color: @bg; 
+               margin: 0;
+               padding: 1em;
+               h1 {
+                   margin: 0;
+                   padding: 0;
+                   padding-top: 2em;
+                   padding-bottom: 1em;
+               }
+            }
+            h2 {
+                border-bottom: 1px solid black;
+                span {
+                    display: block;
+                    float: right;
+                    color: silver;
+                }
+            }
+            div.post {
+                a.float-left {
+                    font-size: 30px;
+                    padding: 5px;
+                    border: 1px solid silver;
+                    display: block;
+                    float: left;
+                    margin: 0px 10px 5px 0px;
+                }
+                padding: 0;
+                margin: 0;
+            }
+            
+            .footer {
+                color: silver;
+                font-style: italic;
+                
+            }
+        }
+    }
 }
-#myB {
-  background-color: @baseBgColor;
-  color: @baseColor;
+
+div.highlight {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0px 3px 0px 3px;
+    background-color: #fdf8ce;
+    border: 1px solid silver;
 }
