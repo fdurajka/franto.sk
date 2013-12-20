@@ -3,3 +3,6 @@ pygments: true
 ftp_host: franto.sk
 ftp_dir: /franto.sk/blog
 ftp_passive: true
+encoding: UTF-8
+port: 80
+baseurl: /blog
