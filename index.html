@@ -5,12 +5,15 @@ title: Franto.sk
 
 {% for post in site.posts %}
 
-	<h2><span>{{ post.date | date_to_string }}</span>{{ post.title }}</h2>
-	<div class="post">
-	{{ post.content }}
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2><span class="pull-right">{{ post.date | date_to_string }}</span><strong>{{ post.title }}</strong></h2>	
+		</div>
+		<div class="panel-body">
+			{{ post.content }}
+		</div>
 	</div>
-	<br style="clear: both" />
-
+	
 {% endfor %}
 
 

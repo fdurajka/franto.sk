@@ -4,14 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ page.title }}</title>
-		 
 
 		<!-- syntax highlighting CSS -->
-		<link rel="stylesheet" href="{{ site.url }}/css/bootstrap.css">
-		<link rel="stylesheet/less" href="{{ site.url }}/css/custom.less">
-		
+		<link rel="stylesheet" href="{{ site.url }}/blog/css/bootstrap.css">
+		<link rel="stylesheet" href="{{ site.url }}/blog/css/bootstrap-theme.css">
+		<link rel="stylesheet/less" href="{{ site.url }}/blog/css/custom.less">
+
 		<!-- javascript -->
-		<script type="text/javascript" src="{{ site.url }}/js/less.js"></script>
+		<script type="text/javascript" src="{{ site.url }}/blog/js/less.js"></script>
+		<script type="text/javascript" src="{{ site.url }}/blog/js/bootstrap.js"></script>
 		<script type="text/javascript">
 			less.poll = 300;
 			less.watch();
@@ -19,19 +20,36 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="site">
-				<div class="header">
-					<h1 class="title">Franto.sk</h1>
-				</div>
-
-				{{ content }}
-
-				<div class="footer">
-					<div class="contact">
-						<p>
-						    generated {{ site.time | date_to_string }} by frantisek.durajka [at] gmail [dot] com
-						</p>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-9">
+					<div class="page-header">
+						<h1>FRANTO.SK</h1>
 					</div>
+
+					<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#"><span class="glyphicon glyphicon-home"></span><strong> Franto.sk</strong></a>
+							</li>
+							<li>
+								<a href="http://franto.sk/epgp">EPGP Viewer</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="site">
+						{{ content }}
+
+						<div class="footer">
+							<div class="contact">
+								<p>
+									generated {{ site.time | date_to_string }} by frantisek.durajka [at] gmail [dot] com
+								</p>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
